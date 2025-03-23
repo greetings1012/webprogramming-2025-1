@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>미래기술</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <h1 class="header-title">
+          <a
+            href="#"
+            class="interactive-button"
+            style="
+              color: inherit;
+              text-decoration: none;
+              font-size: 1.6rem;
+              font-weight: bold;
+            "
+            >미래기술</a
+          >
+        </h1>
+        <nav class="header-nav">
+          <a href="#description-section" class="interactive-button"
+            >미래기술 설명</a
+          >
+          <a href="#strategy-section" class="interactive-button"
+            >미래전략(연관 기술)</a
+          >
+          <a href="#reference-image-section" class="interactive-button"
+            >관련 이미지</a
+          >
+          <a href="#reference-video-section" class="interactive-button"
+            >관련 영상</a
+          >
+          <button id="theme-toggle" class="interactive-button">🌙</button>
+        </nav>
+      </header>
+
+      <section id="description-section" class="content-section">
+        <h2 class="section-title">미래기술 설명</h2>
+        <div class="description-content">미래기술 설명</div>
+      </section>
+
+      <section id="strategy-section" class="content-section">
+        <h2 class="section-title section-title--strategy">
+          미래전략(연관 기술)
+        </h2>
+        <ul class="strategy-list">
+          <li class="strategy-item">
+            <h3 class="strategy-item-title">설명1 제목</h3>
+            <p class="text-content">설명1 내용</p>
+          </li>
+          <li class="strategy-item">
+            <h3 class="strategy-item-title">설명2 제목</h3>
+            <p class="text-content">설명2 내용</p>
+          </li>
+          <li class="strategy-item">
+            <h3 class="strategy-item-title">설명3 제목</h3>
+            <p class="text-content">설명3 내용</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="reference-image-section" class="content-section">
+        <h2 class="section-title">관련 이미지</h2>
+        <div class="media-container">
+          <img
+            class="media-element"
+            src="https://image.ajunews.com/content/image/2020/02/03/20200203170700957265.jpg"
+            alt="미래기술 이미지"
+          />
+          <p class="text-content">미래기술 이미지 설명</p>
+        </div>
+      </section>
+
+      <section id="reference-video-section" class="content-section">
+        <h2 class="section-title">관련 영상</h2>
+        <div class="video-container">
+          <iframe
+            id="youtube-video"
+            name="youtube-video"
+            class="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/A5seH97pl3w"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+        const html = document.documentElement;
+
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function setInitialTheme() {
+          if (prefersDark.matches) {
+            html.classList.add("dark-theme");
+            themeToggle.textContent = "☀️";
+          } else {
+            html.classList.remove("dark-theme");
+            themeToggle.textContent = "🌙";
+          }
+        }
+
+        prefersDark.addEventListener("change", setInitialTheme);
+
+        setInitialTheme();
+
+        function toggleTheme() {
+          const isDark = html.classList.toggle("dark-theme");
+          themeToggle.textContent = isDark ? "☀️" : "🌙";
+        }
+
+        if (themeToggle) {
+          themeToggle.addEventListener("click", toggleTheme);
+        } else {
+          console.error("다크 모드 버튼을 로드하는 중 문제가 발생했습니다.");
+        }
+        return () => {
+          prefersDark.removeEventListener("change", mediaQueryListener);
+          if (themeToggle) {
+            themeToggle.removeEventListener("click", toggleTheme);
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

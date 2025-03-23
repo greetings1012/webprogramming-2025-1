@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "pretendard-variable", sans-serif;
+}
+
+*,
+*:hover,
+*:active,
+*::before,
+*::after {
+  transition: all 0.3s ease;
+}
