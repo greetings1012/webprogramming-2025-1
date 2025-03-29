@@ -1,5 +1,5 @@
 .interactive-button {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-gray);
   cursor: pointer;
@@ -7,20 +7,25 @@
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;
   white-space: nowrap;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  transition: all 0.2s ease;
 }
 
 .interactive-button:hover {
   color: var(--primary-blue);
   background-color: rgba(22, 154, 255, 0.1);
+  transform: translateY(-0.1rem);
 }
 
 .interactive-button:active {
   color: var(--primary-light-blue);
+  transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .interactive-button {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.4rem;
     white-space: nowrap;
   }

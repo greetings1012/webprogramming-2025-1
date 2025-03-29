@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI 알고리즘의 기본 개념과 작동 원리에 대한 상세한 설명"
+    />
+    <meta name="keywords" content="인공지능, AI, 알고리즘, 머신러닝, 딥러닝" />
+    <meta name="author" content="Web Programming 2025-1" />
 
     <link
       rel="preconnect"
@@ -20,97 +26,253 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 
-    <title>미래기술</title>
+    <title>AI 알고리즘의 기본 개념과 작동 원리</title>
   </head>
   <body>
     <div class="layout">
-      <header class="header">
+      <header class="header" role="banner">
         <h1 class="header-title">
           <a
             href="#"
-            class="interactive-button"
-            style="
-              color: inherit;
-              text-decoration: none;
-              font-size: 1.6rem;
-              font-weight: bold;
-            "
-            >미래기술</a
+            class="interactive-button header-title-link"
+            aria-label="홈으로 이동"
           >
+            AI 알고리즘의 기본 개념과 작동 원리
+          </a>
         </h1>
-        <nav class="header-nav">
-          <a href="#description-section" class="interactive-button"
-            >미래기술 설명</a
+        <nav class="header-nav" role="navigation" aria-label="메인 메뉴">
+          <a
+            href="#description-section"
+            class="interactive-button"
+            aria-label="AI 알고리즘 소개 섹션으로 이동"
           >
-          <a href="#strategy-section" class="interactive-button"
-            >미래전략(연관 기술)</a
+            AI 알고리즘이란?
+          </a>
+          <a
+            href="#strategy-section"
+            class="interactive-button"
+            aria-label="AI 알고리즘 원리 섹션으로 이동"
           >
-          <a href="#reference-image-section" class="interactive-button"
-            >관련 이미지</a
+            AI 알고리즘의 기본 원리
+          </a>
+          <a
+            href="#reference-image-section"
+            class="interactive-button"
+            aria-label="AI 시스템 다이어그램 섹션으로 이동"
           >
-          <a href="#reference-video-section" class="interactive-button"
-            >관련 영상</a
+            AI 알고리즘 요약
+          </a>
+          <a
+            href="#reference-video-section"
+            class="interactive-button"
+            aria-label="AI 알고리즘 설명 영상 섹션으로 이동"
           >
-          <button id="theme-toggle" class="interactive-button">🌙</button>
+            AI 기본 원리 설명 영상
+          </a>
+          <button
+            id="theme-toggle"
+            class="interactive-button"
+            aria-label="다크 모드 토글"
+            aria-pressed="false"
+          >
+            🌙
+          </button>
         </nav>
       </header>
 
-      <section id="description-section" class="content-section">
-        <h2 class="section-title">미래기술 설명</h2>
-        <div class="description-content">미래기술 설명</div>
-      </section>
+      <main role="main">
+        <section
+          id="description-section"
+          class="content-section"
+          aria-labelledby="description-title"
+        >
+          <h2 id="description-title" class="section-title">
+            인공지능 알고리즘이란 무엇인가?
+          </h2>
+          <div class="description-content">
+            <p class="description-text">
+              인공지능 알고리즘은 인간의 학습 능력과 사고 과정을 모방하여
+              컴퓨터가 스스로 학습하고 판단할 수 있도록 하는 기술입니다. 이는
+              단순한 규칙 기반의 프로그래밍과 달리, 대량의 데이터를 통해 패턴을
+              학습하고 새로운 상황에 대응할 수 있는 능력을 갖추게 됩니다.
+            </p>
+            <p class="description-text">
+              인공지능의 핵심 특징은 다음과 같습니다.
+            </p>
+            <ul class="description-list">
+              <ul>
+                📊 데이터 기반 학습: 대량의 데이터를 통해 패턴을 인식하고
+                학습하는 능력
+              </ul>
+              <ul>
+                🤖 자동화된 의사결정: 학습된 패턴을 바탕으로 새로운 상황에 대한
+                판단과 대응
+              </ul>
+              <ul>
+                🛠️ 지속적인 개선: 새로운 데이터를 통해 지속적으로 성능을
+                향상시키는 능력
+              </ul>
+            </ul>
+          </div>
+        </section>
 
-      <section id="strategy-section" class="content-section">
-        <h2 class="section-title section-title--strategy">
-          미래전략(연관 기술)
-        </h2>
-        <ul class="strategy-list">
-          <li class="strategy-item">
-            <h3 class="strategy-item-title">설명1 제목</h3>
-            <p class="text-content">설명1 내용</p>
-          </li>
-          <li class="strategy-item">
-            <h3 class="strategy-item-title">설명2 제목</h3>
-            <p class="text-content">설명2 내용</p>
-          </li>
-          <li class="strategy-item">
-            <h3 class="strategy-item-title">설명3 제목</h3>
-            <p class="text-content">설명3 내용</p>
-          </li>
-        </ul>
-      </section>
+        <section
+          id="strategy-section"
+          class="content-section"
+          aria-labelledby="strategy-title"
+        >
+          <h2 id="strategy-title" class="section-title">
+            AI 알고리즘의 기본 원리
+          </h2>
+          <div class="strategy-content">
+            <div class="strategy-intro">
+              <p class="strategy-text">
+                인공지능이란 특정 목적을 위해 설계된 컴퓨터 알고리즘으로, 주어진
+                입력에 기반해 자동으로 과업을 처리합니다.
+                <br />
+                이는 개발자가 직접 컴퓨터에 알고리즘을 입력하는 기존의 방법과
+                달리, 데이터를 기반으로 컴퓨터가 스스로 알고리즘을 학습한다는
+                점에서 큰 차이가 있습니다.
+                <br />
+                그래서 인공지능 알고리즘을 '알고리즘을 위한 알고리즘'이라고도
+                부릅니다.
+              </p>
+            </div>
 
-      <section id="reference-image-section" class="content-section">
-        <h2 class="section-title">관련 이미지</h2>
-        <div class="media-container">
-          <img
-            class="media-element"
-            src="https://image.ajunews.com/content/image/2020/02/03/20200203170700957265.jpg"
-            alt="미래기술 이미지"
-          />
-          <p class="text-content">미래기술 이미지 설명</p>
-        </div>
-      </section>
+            <div class="strategy-definition">
+              <h3 class="strategy-subtitle">알고리즘의 정의</h3>
+              <p class="strategy-text">
+                컴퓨터를 활용한 문제 해결 과정에서, 어떤 문제를 해결하기 위해
+                정의된 절차, 방법, 명령어 등의 집합.
+                <br />
+                학습 알고리즘에서 '학습(Learning)'은 주어진 데이터를 분석해 특정
+                작업을 수행할 수 있는 규칙이나 패턴을 발견하는 과정을 뜻합니다.
+                <br />
+                학습 알고리즘의 역할은 데이터로부터 주어진 과업을 수행할
+                알고리즘을 찾아내는 것입니다.
+                <br />
+                예측 알고리즘에서 '예측(Prediction)'은 학습된 모형을 사용하여
+                새로운 데이터에 대한 결과를 추론하는 과정을 말합니다.
+                <br />
+                즉, 예측 알고리즘은 학습 알고리즘을 통해 학습되며, 특정 과업을
+                수행하는 역할을 합니다.
+                <br />
+                이 두 알고리즘의 역할과 작동 원리를 이해하는 것은 인공지능의
+                기본 원리를 이해하는 데 매우 중요합니다.
+              </p>
+            </div>
 
-      <section id="reference-video-section" class="content-section">
-        <h2 class="section-title">관련 영상</h2>
-        <div class="video-container">
-          <iframe
-            id="youtube-video"
-            name="youtube-video"
-            class="video"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/A5seH97pl3w"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
+            <div class="strategy-process">
+              <h3 class="strategy-subtitle">AI 개발 프로세스</h3>
+              <ul class="strategy-list">
+                <li class="strategy-item">
+                  <h4 class="strategy-item-title">1. 문제 정의</h4>
+                  <p class="strategy-text">
+                    인공지능은 인간이 수행하기 힘든 특정 업무를 문제로 정의하여
+                    학습 데이터 기반으로 컴퓨터를 학습 시켜 자동화하는 것이
+                    목적입니다.
+                  </p>
+                </li>
+
+                <li class="strategy-item">
+                  <h4 class="strategy-item-title">2. 데이터 수집</h4>
+                  <p class="strategy-text">
+                    컴퓨터가 학습할 수 있게 데이터를 수집해야 합니다.
+                    <br />
+                    데이터는 문제 정의에 따라 계획적으로 수집되어야 합니다.
+                  </p>
+                </li>
+
+                <li class="strategy-item">
+                  <h4 class="strategy-item-title">3. 학습 알고리즘</h4>
+                  <p class="strategy-text">
+                    학습 알고리즘은 학습 데이터를 입력으로 받아서 예측
+                    알고리즘을 출력으로 제공합니다.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="reference-image-section"
+          class="content-section"
+          aria-labelledby="image-title"
+        >
+          <h2 id="image-title" class="section-title">AI 알고리즘 요약</h2>
+          <div class="media-container">
+            <figure class="media-item">
+              <img
+                class="media-element"
+                src="images/그림_1_인공지능 시스템 구성도.png"
+                alt="인공지능 시스템의 기본 구성 요소와 데이터 흐름을 보여주는 다이어그램"
+              />
+              <figcaption class="strategy-item-title">
+                인공지능 시스템 구성도
+              </figcaption>
+            </figure>
+
+            <figure class="media-item">
+              <img
+                class="media-element"
+                src="images/그림_2_학습을 위한 데이터 수집.png"
+                alt="데이터 수집 과정과 전처리 단계를 설명하는 다이어그램"
+              />
+              <figcaption class="strategy-item-title">
+                학습을 위한 데이터 수집
+              </figcaption>
+            </figure>
+
+            <figure class="media-item">
+              <img
+                class="media-element"
+                src="images/그림_3_기존정렬 알고리즘,인공지능 정렬 알고리즘.png"
+                alt="기존 정렬 알고리즘과 인공지능 기반 정렬 알고리즘의 비교 다이어그램"
+              />
+              <figcaption class="strategy-item-title">
+                기존 정렬 알고리즘 및 인공지능 정렬 알고리즘
+              </figcaption>
+            </figure>
+
+            <figure class="media-item">
+              <img
+                class="media-element"
+                src="images/그림_4_학습 알고리즘의 예측알고리즘 출력 과정.png"
+                alt="학습 알고리즘이 예측 알고리즘을 생성하는 과정을 보여주는 다이어그램"
+              />
+              <figcaption class="strategy-item-title">
+                학습 알고리즘의 예측알고리즘 출력 과정
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 영상 섹션 -->
+        <section
+          id="reference-video-section"
+          class="content-section"
+          aria-labelledby="video-title"
+        >
+          <h2 id="video-title" class="section-title">AI 기본 원리 설명 영상</h2>
+          <div class="video-container">
+            <iframe
+              id="youtube-video"
+              name="youtube-video"
+              class="video"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/DEplSXzMoQA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+      </main>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
